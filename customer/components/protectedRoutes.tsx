@@ -60,8 +60,8 @@ function LoadingSpinner() {
       <div className="flex flex-col items-center gap-5">
         <div className="relative h-16 w-16">
           <div className="absolute inset-0 rounded-full border-4 border-violet-200" />
-          <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-violet-500 animate-spin" />
-          <div className="absolute inset-3 rounded-full bg-violet-500 animate-pulse" />
+          <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-primary animate-spin" />
+          <div className="absolute inset-3 rounded-full bg-primary animate-pulse" />
         </div>
         <div className="flex gap-1 text-lg font-semibold text-gray-700">
           <span>Loading</span>

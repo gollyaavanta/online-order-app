@@ -75,7 +75,7 @@ export default function CheckoutPage() {
           name: prod.name,
           price: prod.sellingPrice ?? prod.price ?? 0,
           quantity: urlQty,
-          image: prod.images?.[0],
+          image: prod.images?.[0].url,
         });
       }
     }
@@ -98,7 +98,7 @@ export default function CheckoutPage() {
         name: item.product.name || '',
         price: item.product.sellingPrice ?? item.product.price ?? 0,
         quantity: item.quantity || 1,
-        image: item.product.images?.[0],
+        image: item.product.images?.[0].url,
       }));
   }
 
@@ -110,7 +110,7 @@ export default function CheckoutPage() {
   const shippingFee = subtotal > 0 ? 49 : 0;
   const totalAmount = subtotal + shippingFee;
 
-function handlePlaceOrder(e){
+function handlePlaceOrder(e:any){
   e.preventDefault();
 
   
@@ -122,7 +122,7 @@ function handlePlaceOrder(e){
       <div className="flex min-h-[60vh] items-center justify-center">
         <p className="text-muted-foreground animate-pulse">Loading checkout details...</p>
       </div>
-    );
+    );  
   }
 
   if (complete) {

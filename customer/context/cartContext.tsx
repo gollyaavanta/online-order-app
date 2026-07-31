@@ -2,16 +2,19 @@
 
 import React, { createContext, useState, useEffect, ReactNode, useContext } from 'react';
 import axios from 'axios';
+
 import { StoreContext } from "./authContext";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
+
+type Image={url?:string,publicId?:string,isPrimary?:boolean,_id:string}
 
 export interface Product {
   _id: string;
   name: string;
   price: number;
   sellingPrice?: number;
-  images: {url?:string,publicId?:string,isPrimary?:boolean,_id:string}[];
+  images: Image[];
   stock: number;
   isActive: boolean;
   brand?: { _id: string; name: string; slug: string };
