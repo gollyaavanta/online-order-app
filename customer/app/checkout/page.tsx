@@ -75,7 +75,7 @@ export default function CheckoutPage() {
           name: prod.name,
           price: prod.sellingPrice ?? prod.price ?? 0,
           quantity: urlQty,
-          image: prod.images?.[0],
+          image: prod.images?.[0].url,
         });
       }
     }
@@ -98,7 +98,7 @@ export default function CheckoutPage() {
         name: item.product.name || '',
         price: item.product.sellingPrice ?? item.product.price ?? 0,
         quantity: item.quantity || 1,
-        image: item.product.images?.[0],
+        image: item.product.images?.[0].url,
       }));
   }
 
