@@ -4,7 +4,7 @@ import { useContext, useEffect, useMemo } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { StoreContext } from '../context/authContext';
 
-const PROTECTED_ROUTES = ['/cart', '/checkout', '/my-orders'];
+const PROTECTED_ROUTES = ['/cart', '/checkout', '/account/orders'];
 const AUTH_ROUTES = ['/login', '/register'];
 
 /**
